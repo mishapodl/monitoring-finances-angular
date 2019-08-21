@@ -14,4 +14,11 @@ export class UsersService {
       })
     );
   }
+  createNewUser(user): any {
+    return this.http.post('http://localhost:3000/users', user).pipe(
+      map((response: Response) => {
+        return response;
+      })
+    );
+  }
 }
