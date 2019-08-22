@@ -54,6 +54,7 @@ export class LoginComponent implements OnInit {
     const formData = this.form.value;
 
     this.usersService.getUserByEmail(formData.email).subscribe((user: User) => {
+      console.log(user);
       if (user) {
         if (user.password === formData.password) {
           this.message.text = '';

@@ -12,19 +12,18 @@ import { Bill } from '../shared/models/bill.model';
 export class BillPageComponent implements OnInit, OnDestroy {
   subscription: Subscription;
 
-  constructor(private billService: BillService) { }
+  constructor(private billService: BillService) {}
 
   ngOnInit() {
     // this.subscription = Observable.combineLatest(
     //   this.billService.getBill(),
-    //   this.billService.getCurrency(),
+    //   this.billService.getCurrency()
     // ).subscribe((data: [Bill, any]) => {
     //   console.log(data);
     // });
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    // this.subscription.unsubscribe();
   }
-
 }

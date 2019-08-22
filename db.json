@@ -5,6 +5,30 @@
       "email": "wfm@mail.ru",
       "password": "12345678",
       "name": "Администратор"
+    },
+    {
+      "email": "mishapod@gmail.com",
+      "password": "milka132",
+      "name": "milka1321",
+      "id": 2
+    },
+    {
+      "email": "mishapod@gmail.com",
+      "password": "123123",
+      "name": "Миша Подлевских",
+      "id": 3
+    },
+    {
+      "email": "a@a.a",
+      "password": "123123",
+      "name": "123123",
+      "id": 4
+    },
+    {
+      "email": "mishapod12@gmail.com",
+      "password": "123123",
+      "name": "123123123",
+      "id": 5
     }
   ],
   "bill": {
