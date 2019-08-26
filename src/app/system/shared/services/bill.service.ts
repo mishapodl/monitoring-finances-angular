@@ -5,19 +5,23 @@ import { map } from 'rxjs/operators';
 import { Bill } from '../models/bill.model';
 import { BaseApi } from '../../../shared/core/base-api';
 
+const KEY = 'fe79ad99779d19bee34ed9eabf7a1fee';
+
 @Injectable()
 export class BillService extends BaseApi {
   constructor(public http: HttpClient) {
     super(http);
   }
 
-  getBill(): Observable<Bill> {
-    return this.get('bill');
+  getBill(): any {
+    return this.http
+      .get('http://localhost:3000/bill')
+      .pipe(map((response: Response) => response));
   }
 
-  getCurrency(base: string = 'RUB'): Observable<any> {
+  getCurrency(base: string = 'USD'): Observable<any> {
     return this.http
-      .get(`http://api.fixer.io/latest?base=${base}`)
+      .get(`http://data.fixer.io/api/latest?access_key=${KEY}`)
       .pipe(map((response: Response) => response));
   }
 }
