@@ -1,21 +1,28 @@
 <div class="title-block">
-  <h3 class="title">
-    Страница записей <span class="sparkline bar"></span>
-  </h3>
+  <h3 class="title">Страница записей <span class="sparkline bar"></span></h3>
 </div>
 
-<section class="section">
+<section class="section text-center" *ngIf="!isLoaded">
+  Loading ...
+</section>
+
+<section class="section" *ngIf="isLoaded">
   <div class="row">
     <div class="col-md-6">
       <app-add-event></app-add-event>
     </div>
     <div class="col-md-6">
-      <app-add-category (onCategoryAdd)="newCategoryAdded($event)"></app-add-category>
+      <app-add-category
+        (onCategoryAdd)="newCategoryAdded($event)"
+      ></app-add-category>
     </div>
   </div>
   <div class="row">
     <div class="col-md-6">
-      <app-edit-category></app-edit-category>
+      <app-edit-category
+        [categories]="categories"
+        (onCategoryEdit)="categoryWasEdited($event)"
+      ></app-edit-category>
     </div>
   </div>
 </section>
