@@ -8,7 +8,7 @@ import { CategoriesService } from '../shared/services/categories.service';
   styleUrls: ['./records-page.component.css']
 })
 export class RecordsPageComponent implements OnInit {
-  categories: any = [];
+  categories: Category[] = [];
   isLoaded = false;
 
   constructor(private categoriesService: CategoriesService) {}
@@ -16,14 +16,14 @@ export class RecordsPageComponent implements OnInit {
   ngOnInit() {
     this.categoriesService
       .getCategories()
-      .subscribe((categories) => {
-        this.categories =  Array.of(categories);
+      .subscribe((categories: Category[]) => {
+        this.categories = categories;
         this.isLoaded = true;
       });
   }
 
   newCategoryAdded(category: Category) {
-    this.categories.push(console.log(category));
+    this.categories.push(category);
   }
 
   categoryWasEdited(category: Category) {

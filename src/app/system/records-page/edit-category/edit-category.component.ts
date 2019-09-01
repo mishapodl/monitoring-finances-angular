@@ -39,7 +39,6 @@ export class EditCategoryComponent implements OnInit {
     this.categoriesService
       .updateCategory(category)
       .subscribe((category: Category) => {
-        console.log(123);
         this.onCategoryEdit.emit(category);
         this.message.text = 'Категория успешно отредактирована.';
         window.setTimeout(() => (this.message.text = ''), 5000);

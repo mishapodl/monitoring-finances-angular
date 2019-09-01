@@ -10,25 +10,24 @@ import { Category } from '../../shared/models/category.model';
   styleUrls: ['./add-category.component.css']
 })
 export class AddCategoryComponent {
-  // tslint:disable-next-line: no-output-on-prefix
+
   @Output() onCategoryAdd = new EventEmitter<Category>();
 
-  constructor(private categoriesService: CategoriesService) {}
+  constructor(private categoriesService: CategoriesService) {
+  }
 
   onSubmit(form: NgForm) {
-    // tslint:disable-next-line: prefer-const
-    let { name, capacity } = form.value;
-    if (capacity < 0) { capacity *= -1; }
+    let {name, capacity} = form.value;
+    if (capacity < 0) capacity *= -1;
 
     const category = new Category(name, capacity);
 
-    this.categoriesService
-      .addCategory(category)
-      // tslint:disable-next-line: no-shadowed-variable
+    this.categoriesService.addCategory(category)
       .subscribe((category: Category) => {
         form.reset();
-        form.form.patchValue({ capacity: 1 });
+        form.form.patchValue({capacity: 1});
         this.onCategoryAdd.emit(category);
       });
+
   }
 }
