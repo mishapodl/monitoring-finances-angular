@@ -42,8 +42,8 @@
       "id": 1
     },
     {
-      "name": "Еда",
-      "capacity": 10000,
+      "name": "Еда1",
+      "capacity": 100,
       "id": 2
     },
     {
@@ -55,6 +55,16 @@
       "name": "Миша Подлевских",
       "capacity": 4,
       "id": 4
+    },
+    {
+      "name": "Миша Подлевских",
+      "capacity": 1,
+      "id": 5
+    },
+    {
+      "name": "Bread",
+      "capacity": 1,
+      "id": 6
     }
   ],
   "events": [
