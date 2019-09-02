@@ -32,7 +32,7 @@
     }
   ],
   "bill": {
-    "value": 100000,
+    "value": 203300,
     "currency": "RUB"
   },
   "categories": [
@@ -107,6 +107,22 @@
       "date": "10.06.2017 14:01:58",
       "id": 5,
       "description": "Заправка + проход ТО"
+    },
+    {
+      "type": "income",
+      "amount": 100,
+      "category": 3,
+      "date": "02.09.2019 23:37:17",
+      "description": "Fork from https://learn.javascript.ru/event-bubbling",
+      "id": 6
+    },
+    {
+      "type": "income",
+      "amount": 103200,
+      "category": 1,
+      "date": "02.09.2019 23:40:14",
+      "description": "Fork from https://learn.javascript.ru/event-bubbling",
+      "id": 7
     }
   ]
 }
