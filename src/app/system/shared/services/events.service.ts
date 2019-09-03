@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 
 import { BaseApi } from '../../../shared/core/base-api';
 import { APPEvent } from '../models/event.model';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class EventsService extends BaseApi {
@@ -13,5 +14,11 @@ export class EventsService extends BaseApi {
 
   addEvent(event: APPEvent): Observable<APPEvent> {
     return this.post('events', event);
+  }
+
+  getEvents(): any {
+    return this.http
+      .get('http://localhost:3000/events')
+      .pipe(map((response: Response) => response));
   }
 }
