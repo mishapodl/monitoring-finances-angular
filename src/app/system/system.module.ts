@@ -44,9 +44,6 @@ import { HistoryFilterComponent } from './history-page/history-filter/history-fi
     HistoryDetailComponent,
     HistoryEventsComponent,
     HistoryFilterComponent
-
-
-
   ],
   providers: [BillService, CategoriesService, EventsService]
 })

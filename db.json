@@ -32,7 +32,7 @@
     }
   ],
   "bill": {
-    "value": 203300,
+    "value": 101134,
     "currency": "RUB"
   },
   "categories": [
@@ -42,29 +42,14 @@
       "id": 1
     },
     {
-      "name": "Еда1",
-      "capacity": 100,
+      "name": "Еда",
+      "capacity": 10000,
       "id": 2
     },
     {
       "id": 3,
       "name": "Машина",
       "capacity": 7000
-    },
-    {
-      "name": "Миша Подлевских",
-      "capacity": 4,
-      "id": 4
-    },
-    {
-      "name": "Миша Подлевских",
-      "capacity": 1,
-      "id": 5
-    },
-    {
-      "name": "Bread",
-      "capacity": 1,
-      "id": 6
     }
   ],
   "events": [
@@ -109,20 +94,28 @@
       "description": "Заправка + проход ТО"
     },
     {
-      "type": "income",
-      "amount": 100,
+      "type": "outcome",
+      "amount": 1200,
       "category": 3,
-      "date": "02.09.2019 23:37:17",
-      "description": "Fork from https://learn.javascript.ru/event-bubbling",
+      "date": "02.07.2017 23:28:48",
+      "description": "Test",
       "id": 6
     },
     {
-      "type": "income",
-      "amount": 103200,
-      "category": 1,
-      "date": "02.09.2019 23:40:14",
-      "description": "Fork from https://learn.javascript.ru/event-bubbling",
+      "type": "outcome",
+      "amount": 3000,
+      "category": 3,
+      "date": "02.07.2017 23:29:11",
+      "description": "test 2",
       "id": 7
+    },
+    {
+      "type": "income",
+      "amount": 5334,
+      "category": 3,
+      "date": "05.09.2019 01:06:03",
+      "description": "erert",
+      "id": 8
     }
   ]
 }
