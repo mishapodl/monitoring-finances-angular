@@ -10,21 +10,34 @@ import { Category } from '../../shared/models/category.model';
 export class HistoryEventsComponent implements OnInit {
   @Input() categories: Category[] = [];
   @Input() events: APPEvent[] = [];
+  searchValue = '';
+  searchPlaceholder = 'Сумма';
+  searchField = 'amount';
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
-    this.events.forEach((e) => {
+    this.events.forEach(e => {
       e.catName = this.categories.find(c => c.id === e.category).name;
     });
   }
 
   getEventClass(e: APPEvent) {
     return {
-      'label': true,
+      label: true,
       'label-danger': e.type === 'outcome',
       'label-success': e.type === 'income'
     };
   }
 
+  changeCriteria(field: string) {
+    const namesMap = {
+      amount: 'Сумма',
+      date: 'Дата',
+      category: 'Категория',
+      type: 'Тип'
+    };
+    this.searchPlaceholder = namesMap[field];
+    this.searchField = field;
+  }
 }
