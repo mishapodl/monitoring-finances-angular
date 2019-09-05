@@ -21,4 +21,10 @@ export class EventsService extends BaseApi {
       .get('http://localhost:3000/events')
       .pipe(map((response: Response) => response));
   }
+
+  getEventById(id: string): any {
+    return this.http
+      .get(`http://localhost:3000/events/${id}`)
+      .pipe(map((response: Response) => response));
+  }
 }
